@@ -114,6 +114,7 @@ a {
 }
 
 .dropdown__menu li {
+    position: relative;
     padding: 0.7rem;
     display: flex;
     align-items: center;
@@ -125,13 +126,15 @@ a {
         display: none;
     }
 
-    .nav__btn {
-        display: block;
-    }
-
     .dropdown__menu {
         display: block;
     }
+
+    .nav__btn {
+        display: block;
+        cursor: pointer;
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -317,7 +320,7 @@ a {
     }
 
     .conteiner__perfil {
-        display: grid;
+        position: inherit;
         margin: 0;
         width: 250px;
         margin-top: -50px;
@@ -331,7 +334,6 @@ a {
     }
 
     .conteiner__perfil {
-        display: grid;
         margin: 0;
         width: 190px;
         margin-top: -50px;
