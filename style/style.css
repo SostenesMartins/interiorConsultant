@@ -14,15 +14,19 @@
     box-sizing: border-box;
 }
 
+li {
+    list-style: none;
+}
+
 img {
     height: auto;
     max-width: 100%;
 }
 
 body {
-    display: grid;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 10px;
     background-color: #181719;
     color: #FFF;
 }
@@ -54,14 +58,86 @@ body {
 .header__content li {
     list-style: none;
     padding: 8px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif; 
     font-size: 1.13rem;
 }
 
 a {
     text-decoration: none;
     color: #FFF;
+}
+
+.content__a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #FFF;
+    transition: width 0.2s ease 0s;
+    width: 0;
+}
+
+.content__a:hover::after {
+    width: 100%;
+}
+
+.content__a:hover {
+    font-weight: bold;
+}
+
+.nav__btn {
+    display: none;
+}
+
+.dropdown__menu {
+    position: absolute;
+    display: none;
+    right: 1rem;
+    top: 40px;
+    width: 200px;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.020);
+    background-color: #181719;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown__menu.open {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    font-size: 3rem;
+    height: 100%;
+    width: 100%;
+}
+
+.dropdown__menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .header__content {
+        display: none;
+    }
+
+    .nav__btn {
+        display: block;
+    }
+
+    .dropdown__menu {
+        display: block;
+    }
+}
+
+@media (max-width: 900px) {
+    .header__content {
+        gap: 40px;
+    }
 }
 
 .main {
@@ -100,13 +176,22 @@ a {
     margin-top: 20px;
 }
 
+@media (max-width: 1250px) {
+
+    .conteiner__img {
+        justify-content: end;
+        max-width: 50%;
+    }
+}
+
+
 .conteiner__perfil {
     position: absolute;
-    margin-top: -87px;
-    margin-left: 310px;
+    margin-top: -80px;
+    margin-left: 300px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.219);
     background-color: #181719;
-    width: 460px;
+    width: 440px;
 }
 
 .conteiner__perfil__img {
@@ -149,8 +234,113 @@ a {
     padding-bottom: 20px;
 }
 
+@media (max-width: 1250px) {
+    .conteiner__perfil {
+        margin-top: -50px;
+        margin-left: 200px;
+        width: 200px;
+    }
+
+    .img__perfil {
+        width: 40px;
+    }
+
+    .conteiner__perfil__img {
+        gap: 13px;
+    }
+
+    .perfil__name{
+        padding-bottom: 1px;
+        font-size: .70rem;
+    }
+
+    .perfil__cargo {
+        padding-top: 1px;
+        font-size: .55rem;
+    }
+
+    .desc__projeto {
+        line-height: 15px;
+        margin-top: -10px;
+        font-size: .75rem;
+    }
+}
+
+@media (max-width: 980px){
+
+    .main {
+        flex-wrap: wrap;
+        margin-bottom: 200px;
+    }
+
+    .conteiner__img {
+        max-width: 100%;
+    }
+
+    .conteiner__perfil {
+        width: 340px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .main {
+        margin: 40px 10px;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .desc {
+        font-size: 1.2rem;
+    }
+
+    .img__interior {
+        max-width: 380px;
+    }
+
+    .conteiner__perfil {
+        display: grid;
+        margin: 0;
+        width: 250px;
+        margin-top: -50px;
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .img__interior {
+        width: 330px;
+    }
+
+    .conteiner__perfil {
+        display: grid;
+        margin: 0;
+        width: 250px;
+        margin-top: -50px;
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 370px) {
+    .img__interior {
+        width: 280px;
+    }
+
+    .conteiner__perfil {
+        display: grid;
+        margin: 0;
+        width: 190px;
+        margin-top: -50px;
+        margin-left: 70px;
+    }
+}
+ 
 .footer {
-    margin-top: 80px;
+    margin-top: 200px;
     margin-bottom: 20px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
