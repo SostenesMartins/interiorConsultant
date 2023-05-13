@@ -86,13 +86,14 @@ a {
 
 .nav__btn {
     display: none;
+    z-index: 3;
 }
 
 .dropdown__menu {
     position: absolute;
     display: none;
     right: 1rem;
-    top: 40px;
+    top: 75px;
     width: 200px;
     height: 0;
     background-color: rgba(255, 255, 255, 0.020);
@@ -111,6 +112,7 @@ a {
     font-size: 3rem;
     height: 100%;
     width: 100%;
+    z-index: 1;
 }
 
 .dropdown__menu li {
@@ -320,11 +322,15 @@ a {
     }
 
     .conteiner__perfil {
-        position: inherit;
+        position: absolute;
         margin: 0;
         width: 250px;
         margin-top: -50px;
         margin-left: 60px;
+    }
+
+    .dropdown__menu.open{
+        font-size: 2rem;
     }
 }
 
@@ -358,4 +364,3 @@ a {
 .coryright__name a:hover {
     cursor: pointer;
 }
-
