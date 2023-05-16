@@ -1,115 +1,82 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InteriorConsultant</title>
+    <title>Interior Consultant</title>
     <link rel="shortcut icon" href="devchallenges.png" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header class="header">
-        <a class="header__title" href="">
-            This Interior
-        </a>
-        <nav class="nav__conteiner">
-            <ul class="header__content">
-                <li class="content__desc">
-                    <a class="content__a" href="">Home</a>
+        <a class="header__logo" href="">This interior</a>
+        <nav class="nav__menu menu">
+            <ul class="conteiner__menu">
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Home</a>
                 </li>
-                <li class="content__desc">
-                    <a class="content__a" href="">
-                        Collection
-                    </a>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Collection</a>
                 </li>
-                <li class="content__desc">
-                    <a class="content__a" href="">
-                        About
-                    </a>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">About</a>
                 </li>
-                <li class="content__desc">
-                    <a class="content__a" href="">
-                        Contact
-                    </a>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Contact</a>
                 </li>
             </ul>
-            <div class="nav__btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
         </nav>
-
-        <div class="dropdown__menu">
-            <li class="content__desc">
-                <a class="content__a" href="">Home</a>
-            </li>
-            <li class="content__desc">
-                <a class="content__a" href="">
-                    Collection
-                </a>
-            </li>
-            <li class="content__desc">
-                <a class="content__a" href="">
-                    About
-                </a>
-            </li>
-            <li class="content__desc">
-                <a class="content__a" href="">
-                    Contact
-                </a>
-            </li>
+        <div class="menu__icon">
+            <span></span><span></span><span></span>
         </div>
     </header>
 
-    <main class="main">
-        <section class="conteiner__desc">
-            <p class="title">
-                Modern interior
-            <p>
-            <p class="desc">
-                A full-Service residential & commercial interior design and staging company offering professional
-                organizing & eco-services.
-            </p>
-            <a class="desc__ancora" href="">
-                Read more ➞
-            </a>
-        </section>
-
-        <section class="conteiner__img">
-            <img class="img__interior" src="photo1.png" width="820px" height="585px" alt="interior">
-            <div class="conteiner__perfil">
-                <div class="conteiner__perfil__img">
-                    <img class="img__perfil" src="photo2.png" width="85px" height="72px" alt="Aliza Webber">
-                    <div class="conteiner__desc__perfil">
-                        <p class="perfil__name">
-                            Aliza Webber
-                        </p>
-                        <p class="perfil__cargo">
-                            Interior designer
+    <main>
+        <section class="conteiner__main">
+            <div class="conteiner__desc">
+                <h1 class="desc__title">
+                    Modern interior
+                </h1>
+                <p class="desc__interior">
+                    A full-Service residential & commercial interior design and staging company offering professional
+                    organizing & eco-services.
+                </p>
+                <a class="ancora" href="">
+                    Read more ➞
+                </a>
+            </div>
+            <div class="conteiner__img">
+                <img class="photo__interior" src="photo1.png" width="737px" height="555px" alt="interior designer">
+                <div class="perfil">
+                    <div class="conteiner__perfil">
+                        <img class="photo__perfil" src="photo2.png" width="50px" height="50px" alt="Aliza Webber">
+                        <div class="desc__perfil">
+                            <p class="perfil__name">
+                                Aliza Webber
+                            </p>
+                            <p class="perfil__cargo">
+                                Interior designer
+                            </p>
+                        </div>
+                    </div>
+                    <div class="conteiner__project">
+                        <p class="desc__project">
+                            Designed in 2020 by Aliza Webber
                         </p>
                     </div>
-                </div>
-                <div class="perfil__desc">
-                    <p class="desc__projeto">
-                        Designed in 2020 by Aliza Webber
-                    </p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer__conteiner">
-            <p class="footer__copyright">
-                created by
-                <a class="copyright__owner" href="https://www.linkedin.com/in/s%C3%B3stenes-martins-336b491bb/"
-                    target="_blank">Sóstenes</a> -
-                devChallenges.io
+    <footer>
+        <div class="footer__copyright">
+            <p>created by 
+                <a class="copyright__owner" href="https://www.linkedin.com/in/s%C3%B3stenes-martins-336b491bb/">Sóstenes</a> - 
+                devChallenger.io
             </p>
         </div>
     </footer>

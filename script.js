@@ -1,12 +1,20 @@
-const navBtn = document.querySelector('.nav__btn')
-const navBtnIcon = document.querySelector('.nav__btn i')
-const dropDownMenu = document.querySelector('.dropdown__menu')
+const burger = document.querySelector('.menu__icon');
+const menu = document.querySelector('.menu');
+const body = document.body
 
-navBtn.onclick = function () {
-    dropDownMenu.classList.toggle('open')
-    const isOpen = dropDownMenu.classList.contains('open')
-
-    navBtnIcon.classList = isOpen
-    ? 'fa-solid fa-xmark'
-    : 'fa-solid fa-bars'
+if (burger && menu) {
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('_active');
+        menu.classList.toggle('_active');
+        body.classList.toggle('_lock');
+    })
 }
+
+const menuItems = document.querySelectorAll('.menu__link');
+
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        menuItems.forEach(item => item.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
